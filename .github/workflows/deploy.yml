@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: 🚀 Build & Deploy to Hostinger via FTP
+name: 🚀 Build & Deploy to Hostinger via FTP (Safe, No Nested Folders)
 
 on:
   push:
@@ -22,20 +22,18 @@ jobs:
       # 3) Build production bundle
       - name: Build production bundle
         env:
-          CI: false    # disable CRA’s “warnings as errors” in CI
+          CI: false    # disable CRA’s warnings-as-errors in CI
         run: npm run build
 
-      # 4) Debug FTP connectivity (plain FTP)
+      # 4) (Optional) Quick FTP sanity check
       - name: Debug FTP connectivity
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ftp
-          echo "Testing FTP to 145.14.152.253:21…"
-          # feed commands into ftp
           {
             printf "user u863528652.omcottons.com Omcottons@123\n"
             printf "pwd\n"
-            printf "ls -la public_html\n"
+            printf "ls -la\n"
             printf "bye\n"
           } | ftp -n 145.14.152.253 21
 
@@ -43,10 +41,12 @@ jobs:
       - name: Deploy build via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 145.14.152.253                 # no "ftp://"
+          server: 145.14.152.253
           port: 21
           username: u863528652.omcottons.com
           password: Omcottons@123
           protocol: ftp
-          local-dir: build/                     # must end with '/'
-          server-dir: public_html/              # must end with '/'
+          local-dir: build/   # must end with '/'
+          server-dir: ./      # deploy directly into your FTP home (public_html)
+          clean: false        # do NOT delete server files before upload
+          allow-delete: false # do NOT remove any existing files
