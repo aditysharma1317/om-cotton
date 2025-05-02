@@ -86,7 +86,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-wider mb-6">
-              Premium Cotton Garments, Crafted for Your Brand.
+              Premium Cotton Garments, Crafted for Your Brand..
             </h1>
             <p className="text-xl mb-8 tracking-wide">
               Elevating your fashion line with exceptional quality, sustainable practices, and tailored manufacturing solutions.
