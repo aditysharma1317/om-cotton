@@ -22,30 +22,31 @@ jobs:
       # 3) Build production bundle
       - name: Build production bundle
         env:
-          CI: false     # disable CRA’s warnings-as-errors
+          CI: false    # disable CRA’s “warnings as errors” in CI
         run: npm run build
 
-      # 4) (Optional) Verify FTP connectivity
-      - name: Debug FTP connectivity with lftp
+      # 4) Debug FTP connectivity (plain FTP)
+      - name: Debug FTP connectivity
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y lftp
-          echo "Listing remote public_html on 145.14.152.253:21"
-          lftp -u "u863528652.omcottons.com","Omcottons@123" \
-               -p 21 145.14.152.253 << 'EOF'
-            pwd
-            ls -la public_html
-            bye
-          EOF
+          sudo apt-get install -y ftp
+          echo "Testing FTP to 145.14.152.253:21…"
+          # feed commands into ftp
+          {
+            printf "user u863528652.omcottons.com Omcottons@123\n"
+            printf "pwd\n"
+            printf "ls -la public_html\n"
+            printf "bye\n"
+          } | ftp -n 145.14.152.253 21
 
       # 5) Deploy build via FTP
       - name: Deploy build via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp://145.14.152.253
+          server: 145.14.152.253                 # no "ftp://"
           port: 21
           username: u863528652.omcottons.com
           password: Omcottons@123
           protocol: ftp
-          local-dir: build/        # must end with '/'
-          server-dir: public_html/ # must end with '/'
+          local-dir: build/                     # must end with '/'
+          server-dir: public_html/              # must end with '/'
