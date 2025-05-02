@@ -42,7 +42,7 @@ jobs:
       - name: Deploy build via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 145.14.152.253
+          server: ftp://145.14.152.253
           port: 21
           username: u863528652.omcottons.com
           password: Omcottons@123
