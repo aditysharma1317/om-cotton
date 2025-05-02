@@ -1,45 +1,41 @@
-# .github/workflows/deploy.yml
-name: Build & Deploy to Hostinger via SFTP
+name: 🚀 Deploy to Hostinger via SFTP
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Check out your code
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2) Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 3) Build your React app
       - name: Build production bundle
         env:
-          CI: false   # disable treating warnings as errors
+          CI: false
         run: npm run build
 
-      # 4) Clean remote public_html folder
-      - name: Clean remote public_html
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOSTINGER_HOST }}
-          port: ${{ secrets.HOSTINGER_PORT }}
-          username: ${{ secrets.HOSTINGER_USERNAME }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
-          script: |
-            # remove everything under files/public_html
-            rm -rf /home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html/*
-            # ensure the folder still exists
-            mkdir -p /home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html
+      # ←––––– DEBUG STEP –––––→
+      - name: Debug SFTP connectivity & path
+        # install sshpass + sftp client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+          echo "Listing remote directory…"
+          sshpass -p "${{ secrets.HOSTINGER_PASSWORD }}" \
+            sftp -oStrictHostKeyChecking=no \
+                 -P "${{ secrets.HOSTINGER_PORT }}" \
+                 "${{ secrets.HOSTINGER_USERNAME }}@${{ secrets.HOSTINGER_HOST }}" << 'EOF'
+            pwd
+            ls -la /home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html
+            quit
+          EOF
 
-      # 5) Upload build output via SFTP
       - name: Upload build via SFTP
         uses: appleboy/scp-action@master
         with:
@@ -49,3 +45,4 @@ jobs:
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           source: "build/**"
           target: "/home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html/"
+          strip_components: 1
