@@ -33,6 +33,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}  # e.g. u863528652.omcottons.com
           password: ${{ secrets.FTP_PASSWORD }}  # your FTP account password
           protocol: ftp                          # or "ftps" if you enable FTPS in hPanel
-          local-dir: build                       # your CRA output folder
-          server-dir: public_html                # path inside your FTP home
+          local-dir: build/                       # your CRA output folder
+          server-dir: public_html/               # path inside your FTP home
 
