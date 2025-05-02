@@ -11,34 +11,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1) Checkout your code
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2) Install dependencies
       - name: Install dependencies
         run: npm ci
 
+      # 3) Build production bundle
       - name: Build production bundle
         env:
-          CI: false      # disable CRA’s warnings-as-errors
+          CI: false     # disable CRA’s warnings-as-errors
         run: npm run build
 
-      # Optional debug
-      - name: Debug FTP connectivity
+      # 4) (Optional) Verify FTP connectivity
+      - name: Debug FTP connectivity with lftp
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y lftp
-          lftp -u "${{ secrets.FTP_USERNAME }}","${{ secrets.FTP_PASSWORD }}" \
-               -p ${{ secrets.FTP_PORT }} ${{ secrets.FTP_HOST }} \
-               -e "pwd; ls -la public_html; bye"
+          echo "Listing remote public_html on 145.14.152.253:21"
+          lftp -u "u863528652.omcottons.com","Omcottons@123" \
+               -p 21 145.14.152.253 << 'EOF'
+            pwd
+            ls -la public_html
+            bye
+          EOF
 
+      # 5) Deploy build via FTP
       - name: Deploy build via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          port: ${{ secrets.FTP_PORT }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: 145.14.152.253
+          port: 21
+          username: u863528652.omcottons.com
+          password: Omcottons@123
           protocol: ftp
-          local-dir: build/         # <-- must end with '/'
-          server-dir: public_html/  # <-- must end with '/'
-
+          local-dir: build/        # must end with '/'
+          server-dir: public_html/ # must end with '/'
