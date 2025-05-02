@@ -19,13 +19,12 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      - name: Deploy build via SFTP
+        uses: appleboy/scp-action@master
         with:
-          server: ${{ secrets.HOSTINGER_HOST }}
-          port: ${{ secrets.HOSTINGER_PORT }}
+          host: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USERNAME }}
           password: ${{ secrets.HOSTINGER_PASSWORD }}
-          protocol: sftp
-          local-dir: build
-          server-dir: /public_html
+          port: ${{ secrets.HOSTINGER_PORT }}
+          source: "build/**"
+          target: "/public_html"
