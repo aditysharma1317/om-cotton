@@ -27,5 +27,5 @@ jobs:
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           port: ${{ secrets.HOSTINGER_PORT }}
           source: "build/**"
-          target: "/home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html"
+          target: "/"
           rm: true
