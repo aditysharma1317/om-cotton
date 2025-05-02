@@ -1,4 +1,5 @@
-name: 🚀 Deploy to Hostinger via SFTP
+# .github/workflows/deploy.yml
+name: 🚀 Deploy to Hostinger via FTP
 
 on:
   push:
@@ -12,37 +13,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build production bundle
-        env:
-          CI: false
-        run: npm run build
-
-      # ←––––– DEBUG STEP –––––→
-      - name: Debug SFTP connectivity & path
-        # install sshpass + sftp client
+      - name: Install dependencies & build
         run: |
-          sudo apt-get update
-          sudo apt-get install -y sshpass
-          echo "Listing remote directory…"
-          sshpass -p "${{ secrets.HOSTINGER_PASSWORD }}" \
-            sftp -oStrictHostKeyChecking=no \
-                 -P "${{ secrets.HOSTINGER_PORT }}" \
-                 "${{ secrets.HOSTINGER_USERNAME }}@${{ secrets.HOSTINGER_HOST }}" << 'EOF'
-            pwd
-            ls -la /home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html
-            quit
-          EOF
+          npm ci
+          npm run build
 
-      - name: Upload build via SFTP
-        uses: appleboy/scp-action@master
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: ${{ secrets.HOSTINGER_HOST }}
-          port: ${{ secrets.HOSTINGER_PORT }}
-          username: ${{ secrets.HOSTINGER_USERNAME }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
-          source: "build/**"
-          target: "/home/${{ secrets.HOSTINGER_USERNAME }}/files/public_html/"
-          strip_components: 1
+          server: ${{ secrets.FTP_HOST }}
+          port: ${{ secrets.FTP_PORT }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp           # ftp or ftps if you enable TLS in hPanel
+          local-dir: build        # your CRA output
+          server-dir: public_html # path inside FTP home → public_html
