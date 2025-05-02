@@ -49,4 +49,4 @@ jobs:
           password: Omcottons@123
           protocol: ftp
           local-dir: build/                     # must end with '/'
-          server-dir: public_html/              # must end with '/'
+          server-dir: /                         # must end with '/'
