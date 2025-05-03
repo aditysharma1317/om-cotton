@@ -3,10 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Banner from './UnderConstructionBanner';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,11 +46,27 @@ const Navbar: React.FC = () => {
                             <Link to="/request-samples"><button className="px-5 py-2 bg-[#ADC4A0] text-white rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button></Link>
                             <button className="px-5 py-2 border border-[#D88F70] text-[#D88F70] rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400 whitespace-nowrap cursor-pointer">Book a Call</button>
                         </div>
-                        <div className="md:hidden cursor-pointer">
-                            <i className="fas fa-bars text-xl"></i>
+                        <div className="md:hidden cursor-pointer" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                            <FontAwesomeIcon icon={faBars} />
                         </div>
                     </div>
                 </div>
+                {isMobileMenuOpen && (
+                    <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50 px-6 py-4">
+                        <div className="flex flex-col space-y-4">
+                            <Link to="/" className={navLinkClasses('/')} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                            <Link to="/products" className={navLinkClasses('/products')} onClick={() => setIsMobileMenuOpen(false)}>Products</Link>
+                            <Link to="/blogs" className={navLinkClasses('/blogs')} onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link>
+                            <Link to="/sustainability" className={navLinkClasses('/sustainability')} onClick={() => setIsMobileMenuOpen(false)}>Sustainability</Link>
+                            <Link to="/about" className={navLinkClasses('/about')} onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+                            <Link to="/contact" className={navLinkClasses('/contact')} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+                            <Link to="/request-samples" onClick={() => setIsMobileMenuOpen(false)}>
+                                <button className="w-full py-2 bg-[#ADC4A0] text-white rounded-button hover:bg-[#9BB58E] transition-colors duration-400">Request Samples</button>
+                            </Link>
+                            <button className="w-full py-2 border border-[#D88F70] text-[#D88F70] rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400">Book a Call</button>
+                        </div>
+                    </div>
+                )}
             </nav>
         </>
     );
