@@ -1,7 +1,8 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
-const Home: React.FC = () => {
+import Footer from '../Components/Footer';
+
+const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -49,29 +50,6 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen font-sans bg-[#F8F7F3] text-gray-800">
       {/* Navigation */}
-      {/* <nav className={`fixed w-full z-50 transition-all duration-400 ${isScrolled ? 'bg-[#F8F7F3] shadow-sm' : 'bg-transparent'}`}>
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-semibold tracking-wider">
-              <span className="text-[#D88F70]">Om</span> <span className="text-gray-800">Cottons</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide">Home</a>
-              <a href="#" data-readdy="true" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide">Products</a>
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide">Sustainability</a>
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide">About</a>
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide">Contact</a>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="px-5 py-2 bg-[#ADC4A0] text-white rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
-              <button className="px-5 py-2 border border-[#D88F70] text-[#D88F70] rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400 whitespace-nowrap cursor-pointer">Book a Call</button>
-            </div>
-            <div className="md:hidden cursor-pointer">
-              <i className="fas fa-bars text-xl"></i>
-            </div>
-          </div>
-        </div>
-      </nav> */}
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
@@ -86,10 +64,10 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-wider mb-6">
-              Premium Cotton Garments, Crafted for Your Brand..
+              Your Trusted Partner in Organic Cotton Sourcing.
             </h1>
             <p className="text-xl mb-8 tracking-wide">
-              Elevating your fashion line with exceptional quality, sustainable practices, and tailored manufacturing solutions.
+              Connecting fashion brands with premium organic cotton suppliers, ensuring quality, sustainability, and ethical sourcing.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="px-8 py-3 bg-[#ADC4A0] text-white text-lg rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
@@ -108,20 +86,20 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#F8F7F3] group-hover:bg-[#E7DFD2] transition-colors duration-400">
-                <i className="fas fa-award text-3xl text-[#ADC4A0]"></i>
+                <i className="fas fa-certificate text-3xl text-[#ADC4A0]"></i>
               </div>
-              <h3 className="text-xl font-semibold mb-3 tracking-wide">Quality</h3>
+              <h3 className="text-xl font-semibold mb-3 tracking-wide">Verified Quality</h3>
               <p className="text-gray-600 leading-relaxed">
-                Premium materials and expert craftsmanship ensure exceptional garments that meet the highest standards.
+                Rigorous supplier vetting and quality control processes ensure only the finest organic cotton reaches your production line.
               </p>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-[#F8F7F3] group-hover:bg-[#E7DFD2] transition-colors duration-400">
-                <i className="fas fa-sync-alt text-3xl text-[#ADC4A0]"></i>
+                <i className="fas fa-handshake text-3xl text-[#ADC4A0]"></i>
               </div>
-              <h3 className="text-xl font-semibold mb-3 tracking-wide">Flexibility</h3>
+              <h3 className="text-xl font-semibold mb-3 tracking-wide">Strategic Partnerships</h3>
               <p className="text-gray-600 leading-relaxed">
-                Customizable production processes adapted to your specific requirements and timelines.
+                Direct relationships with certified organic cotton suppliers worldwide, offering competitive advantages to our clients.
               </p>
             </div>
             <div className="text-center group">
@@ -130,7 +108,7 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3 tracking-wide">Sustainability</h3>
               <p className="text-gray-600 leading-relaxed">
-                Eco-conscious practices and certified materials that support your brand's environmental commitments.
+                Ensuring transparent and ethical sourcing practices that align with global organic and sustainability standards.
               </p>
             </div>
           </div>
@@ -140,9 +118,9 @@ const Home: React.FC = () => {
       <section className="relative py-16 bg-[#E7DFD2]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold tracking-wide">Our Production Process</h2>
+            <h2 className="text-3xl font-semibold tracking-wide">Our Sourcing Process</h2>
             <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
-              From raw cotton to finished garments, every step is handled with precision and care.
+              From farm selection to delivery, we ensure transparency and quality at every step of the organic cotton sourcing journey.
             </p>
           </div>
           <div className="relative rounded-lg overflow-hidden shadow-xl max-w-4xl mx-auto">
@@ -164,10 +142,10 @@ const Home: React.FC = () => {
             </video>
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
               <div className="flex justify-between text-white">
-                <span><i className="fas fa-cut mr-2"></i> Cutting</span>
-                <span><i className="fas fa-tshirt mr-2"></i> Sewing</span>
-                <span><i className="fas fa-clipboard-check mr-2"></i> Quality Control</span>
-                <span><i className="fas fa-box mr-2"></i> Packaging</span>
+                <span><i className="fas fa-search mr-2"></i> Farm Selection</span>
+                <span><i className="fas fa-certificate mr-2"></i> Quality Verification</span>
+                <span><i className="fas fa-clipboard-check mr-2"></i> Certification Check</span>
+                <span><i className="fas fa-truck mr-2"></i> Logistics</span>
               </div>
             </div>
           </div>
@@ -249,85 +227,19 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-[#ADC4A0] text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 tracking-wide">Ready to Elevate Your Collection?</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 tracking-wide">Ready to Source Premium Organic Cotton?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Partner with Om Cottons for premium quality garments that align with your brand's vision and values.
+            Partner with Om Cottons to access the finest organic cotton suppliers that align with your brand's vision and values.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="px-8 py-3 bg-white text-[#ADC4A0] text-lg font-medium rounded-button hover:bg-gray-100 transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
+            <button className="px-8 py-3 bg-white text-[#ADC4A0] text-lg font-medium rounded-button hover:bg-gray-100 transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Supplier Info</button>
             <button className="px-8 py-3 border-2 border-white text-white text-lg font-medium rounded-button hover:bg-white hover:text-[#ADC4A0] transition-colors duration-400 whitespace-nowrap cursor-pointer">Book a Consultation</button>
           </div>
         </div>
       </section>
       {/* Footer */}
-      <footer className="bg-[#F8F7F3] pt-16 pb-8">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="text-2xl font-semibold tracking-wider mb-6">
-                <span className="text-[#D88F70]">Om</span> <span className="text-gray-800">Cottons</span>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Premium cotton garments crafted with care, quality, and sustainability.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">
-                  <i className="fab fa-linkedin text-xl"></i>
-                </a>
-                <a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">
-                  <i className="fab fa-instagram text-xl"></i>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6 tracking-wide">Quick Links</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Home</a></li>
-                <li><a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/e5769924-a09c-4c36-a569-e98d273656bc" data-readdy="true" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Products</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Sustainability</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">About Us</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6 tracking-wide">Products</h3>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">T-shirts</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Polos</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Hoodies</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Workwear</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Custom Orders</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6 tracking-wide">Contact Us</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <i className="fas fa-map-marker-alt mt-1 mr-3 text-[#D88F70]"></i>
-                  <span className="text-gray-600">123 Cotton Lane, Textile District, Mumbai, India</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="fas fa-phone mr-3 text-[#D88F70]"></i>
-                  <span className="text-gray-600">+91 98765 43210</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="fas fa-envelope mr-3 text-[#D88F70]"></i>
-                  <span className="text-gray-600">info@omcottons.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Om Cottons. All rights reserved.</p>
-            <div className="flex justify-center space-x-4 mt-4">
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Privacy Policy</a>
-              <span>|</span>
-              <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
-export default Home
+export default App

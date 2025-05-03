@@ -176,7 +176,7 @@ const App: React.FC = () => {
                                     <i className="fas fa-phone-alt"></i>
                                 </div>
                                 <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                                <p className="text-gray-600 text-sm">+91 98765 43210</p>
+                                <p className="text-gray-600 text-sm"> +91 9664348046</p>
                             </div>
                             <div className="bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-sm border border-gray-100">
                                 <div className="text-[#ADC4A0] text-2xl mb-2">
@@ -431,7 +431,7 @@ const App: React.FC = () => {
                                         href="tel:+919876543210"
                                         className="text-gray-700 hover:text-[#D88F70] cursor-pointer"
                                     >
-                                        +91 98765 43210
+                                        +91 9664348046
                                     </a>
                                 </div>
                             </div>
@@ -779,12 +779,12 @@ const App: React.FC = () => {
                                 <li className="flex items-start">
                                     <i className="fas fa-map-marker-alt mt-1 mr-3 text-[#D88F70]"></i>
                                     <span className="text-gray-600">
-                                        123 Cotton Lane, Textile District, Mumbai, India
+                                        Vaishno Niketan, CEERI Road, Pilani, Rajasthan - 333031
                                     </span>
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fas fa-phone mr-3 text-[#D88F70]"></i>
-                                    <span className="text-gray-600">+91 98765 43210</span>
+                                    <span className="text-gray-600"> +91 9664348046</span>
                                 </li>
                                 <li className="flex items-center">
                                     <i className="fas fa-envelope mr-3 text-[#D88F70]"></i>

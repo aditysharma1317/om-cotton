@@ -22,8 +22,8 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <Banner />
             <nav className={`fixed w-full z-50 transition-all duration-400 ${isScrolled ? 'bg-[#F8F7F3] shadow-sm' : 'bg-transparent'}`}>
+                <Banner />
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex justify-between items-center">
                         <div className="text-2xl font-semibold tracking-wider">
@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
                         <div className="hidden md:flex items-center space-x-8">
                             <Link to="/" className={navLinkClasses('/')}>Home</Link>
                             <Link to="/products" className={navLinkClasses('/products')}>Products</Link>
+                            <Link to="/blogs" className={navLinkClasses('/blogs')}>Blogs</Link>
                             <Link to="/sustainability" className={navLinkClasses('/sustainability')}>Sustainability</Link>
                             <Link to="/about" className={navLinkClasses('/about')}>About</Link>
                             <Link to="/contact" className={navLinkClasses('/contact')}>Contact</Link>

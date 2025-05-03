@@ -1,6 +1,7 @@
 // The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState, useRef } from "react";
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const App: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -402,8 +403,8 @@ const App: React.FC = () => {
                                         <div
                                             key={fabric.id}
                                             className={`bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md ${selectedFabrics.includes(fabric.id)
-                                                    ? "ring-2 ring-[#D88F70]"
-                                                    : ""
+                                                ? "ring-2 ring-[#D88F70]"
+                                                : ""
                                                 }`}
                                         >
                                             <div className="h-64 overflow-hidden">
@@ -421,8 +422,8 @@ const App: React.FC = () => {
                                                     <div
                                                         onClick={() => handleFabricSelection(fabric.id)}
                                                         className={`w-6 h-6 flex-shrink-0 border ${selectedFabrics.includes(fabric.id)
-                                                                ? "bg-[#D88F70] border-[#D88F70] text-white"
-                                                                : "border-gray-300"
+                                                            ? "bg-[#D88F70] border-[#D88F70] text-white"
+                                                            : "border-gray-300"
                                                             } rounded cursor-pointer flex items-center justify-center transition-colors duration-200`}
                                                     >
                                                         {selectedFabrics.includes(fabric.id) && (
@@ -443,8 +444,8 @@ const App: React.FC = () => {
                                                 <button
                                                     onClick={() => handleFabricSelection(fabric.id)}
                                                     className={`mt-4 w-full py-2 !rounded-button whitespace-nowrap cursor-pointer ${selectedFabrics.includes(fabric.id)
-                                                            ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
-                                                            : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
+                                                        ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
+                                                        : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
                                                         } transition-colors duration-300`}
                                                 >
                                                     {selectedFabrics.includes(fabric.id)
@@ -468,8 +469,8 @@ const App: React.FC = () => {
                                         <div
                                             key={fabric.id}
                                             className={`bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md ${selectedFabrics.includes(fabric.id)
-                                                    ? "ring-2 ring-[#D88F70]"
-                                                    : ""
+                                                ? "ring-2 ring-[#D88F70]"
+                                                : ""
                                                 }`}
                                         >
                                             <div className="h-64 overflow-hidden">
@@ -487,8 +488,8 @@ const App: React.FC = () => {
                                                     <div
                                                         onClick={() => handleFabricSelection(fabric.id)}
                                                         className={`w-6 h-6 flex-shrink-0 border ${selectedFabrics.includes(fabric.id)
-                                                                ? "bg-[#D88F70] border-[#D88F70] text-white"
-                                                                : "border-gray-300"
+                                                            ? "bg-[#D88F70] border-[#D88F70] text-white"
+                                                            : "border-gray-300"
                                                             } rounded cursor-pointer flex items-center justify-center transition-colors duration-200`}
                                                     >
                                                         {selectedFabrics.includes(fabric.id) && (
@@ -509,8 +510,8 @@ const App: React.FC = () => {
                                                 <button
                                                     onClick={() => handleFabricSelection(fabric.id)}
                                                     className={`mt-4 w-full py-2 !rounded-button whitespace-nowrap cursor-pointer ${selectedFabrics.includes(fabric.id)
-                                                            ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
-                                                            : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
+                                                        ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
+                                                        : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
                                                         } transition-colors duration-300`}
                                                 >
                                                     {selectedFabrics.includes(fabric.id)
@@ -534,8 +535,8 @@ const App: React.FC = () => {
                                         <div
                                             key={fabric.id}
                                             className={`bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md ${selectedFabrics.includes(fabric.id)
-                                                    ? "ring-2 ring-[#D88F70]"
-                                                    : ""
+                                                ? "ring-2 ring-[#D88F70]"
+                                                : ""
                                                 }`}
                                         >
                                             <div className="h-64 overflow-hidden">
@@ -553,8 +554,8 @@ const App: React.FC = () => {
                                                     <div
                                                         onClick={() => handleFabricSelection(fabric.id)}
                                                         className={`w-6 h-6 flex-shrink-0 border ${selectedFabrics.includes(fabric.id)
-                                                                ? "bg-[#D88F70] border-[#D88F70] text-white"
-                                                                : "border-gray-300"
+                                                            ? "bg-[#D88F70] border-[#D88F70] text-white"
+                                                            : "border-gray-300"
                                                             } rounded cursor-pointer flex items-center justify-center transition-colors duration-200`}
                                                     >
                                                         {selectedFabrics.includes(fabric.id) && (
@@ -575,8 +576,8 @@ const App: React.FC = () => {
                                                 <button
                                                     onClick={() => handleFabricSelection(fabric.id)}
                                                     className={`mt-4 w-full py-2 !rounded-button whitespace-nowrap cursor-pointer ${selectedFabrics.includes(fabric.id)
-                                                            ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
-                                                            : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
+                                                        ? "bg-[#D88F70] text-white hover:bg-[#C67E60]"
+                                                        : "border border-[#D88F70] text-[#D88F70] hover:bg-[#D88F70] hover:text-white"
                                                         } transition-colors duration-300`}
                                                 >
                                                     {selectedFabrics.includes(fabric.id)
@@ -1051,175 +1052,7 @@ const App: React.FC = () => {
                 </div>
             </section>
             {/* Footer */}
-            <footer className="bg-[#F8F7F3] pt-16 pb-8">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                        <div>
-                            <div className="text-2xl font-semibold tracking-wider mb-6">
-                                <span className="text-[#D88F70]">Om</span>{" "}
-                                <span className="text-gray-800">Cottons</span>
-                            </div>
-                            <p className="text-gray-600 mb-4">
-                                Premium cotton garments crafted with care, quality, and
-                                sustainability.
-                            </p>
-                            <div className="flex space-x-4">
-                                <a
-                                    href="#"
-                                    className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                >
-                                    <i className="fab fa-linkedin text-xl"></i>
-                                </a>
-                                <a
-                                    href="#"
-                                    className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                >
-                                    <i className="fab fa-instagram text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-6 tracking-wide">
-                                Quick Links
-                            </h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/e5769924-a09c-4c36-a569-e98d273656bc"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Products
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/3ed2e05a-6169-4d0b-9a19-4fa7cad8b6be"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Sustainability
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/ae45447f-9172-433e-b03a-ff4e7f415fae"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        About Us
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/7a561bbd-6b25-4cfc-9942-9c0ac617001c"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-6 tracking-wide">
-                                About Us
-                            </h3>
-                            <ul className="space-y-3">
-                                <li>
-                                    <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/ae45447f-9172-433e-b03a-ff4e7f415fae"
-                                        data-readdy="true"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Our Story
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Mission & Values
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Leadership Team
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Careers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                                    >
-                                        Press
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-6 tracking-wide">
-                                Contact Us
-                            </h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-start">
-                                    <i className="fas fa-map-marker-alt mt-1 mr-3 text-[#D88F70]"></i>
-                                    <span className="text-gray-600">
-                                        123 Cotton Lane, Textile District, Mumbai, India
-                                    </span>
-                                </li>
-                                <li className="flex items-center">
-                                    <i className="fas fa-phone mr-3 text-[#D88F70]"></i>
-                                    <span className="text-gray-600">+91 98765 43210</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <i className="fas fa-envelope mr-3 text-[#D88F70]"></i>
-                                    <span className="text-gray-600">info@omcottons.com</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
-                        <p>&copy; 2025 Om Cottons. All rights reserved.</p>
-                        <div className="flex justify-center space-x-4 mt-4">
-                            <a
-                                href="#"
-                                className="hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                            >
-                                Privacy Policy
-                            </a>
-                            <span>|</span>
-                            <a
-                                href="#"
-                                className="hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
-                            >
-                                Terms of Service
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 };

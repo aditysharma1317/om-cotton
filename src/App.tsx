@@ -6,6 +6,8 @@ import Sustainability from "./Pages/Sustainability";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import RequestSample from "./Pages/Request-Sample";
+import Blogs from "./Pages/Blogs";
+import BlogDetail from './Pages/BlogDetail';
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/request-samples" element={<RequestSample />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<BlogDetail />} />
       </Routes>
     </BrowserRouter>
   );
