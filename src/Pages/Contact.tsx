@@ -190,7 +190,7 @@ const App: React.FC = () => {
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
-                                <p className="text-gray-600 text-sm">Mumbai, India</p>
+                                <p className="text-gray-600 text-sm">Pilani, Rajasthan</p>
                             </div>
                         </div>
                     </div>
@@ -334,7 +334,7 @@ const App: React.FC = () => {
                             <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
                                 <div className="h-80 bg-gray-200">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.71637258089848!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1650456651876!5m2!1sen!2sus"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.688106837967!2d75.5908114757109!3d28.36827767581007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39131b02414355fd%3A0x1d2abb7cb326b1ff!2sVaishno%20niketan!5e0!3m2!1sen!2snp!4v1746286636408!5m2!1sen!2snp"
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}
@@ -349,15 +349,15 @@ const App: React.FC = () => {
                                         Om Cottons Headquarters
                                     </h3>
                                     <p className="text-gray-700 mb-4">
-                                        123 Cotton Lane, Textile District
+                                        Vaishno Niketan, CEERI Road
                                         <br />
-                                        Mumbai, Maharashtra 400001
+                                        Pilani, Rajastham 333031
                                         <br />
                                         India
                                     </p>
                                     <div className="flex items-center text-[#D88F70]">
                                         <i className="fas fa-directions mr-2"></i>
-                                        <a href="#" className="hover:underline cursor-pointer">
+                                        <a href="https://maps.app.goo.gl/wjUgZZv7jepewhFF6"   target="_blank" rel="noopener noreferrer" className="hover:underline cursor-pointer">
                                             Get Directions
                                         </a>
                                     </div>
@@ -412,7 +412,7 @@ const App: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-semibold mb-3">Business Inquiries</h3>
                             <div className="mb-4">
-                                <p className="text-gray-700 font-medium">Raj Mehta</p>
+                                <p className="text-gray-700 font-medium">Vinod Sharma</p>
                                 <p className="text-gray-600">Business Development Manager</p>
                             </div>
                             <div className="space-y-2 mb-4">
@@ -428,10 +428,10 @@ const App: React.FC = () => {
                                 <div className="flex items-center">
                                     <i className="fas fa-phone-alt text-[#D88F70] mr-3"></i>
                                     <a
-                                        href="tel:+919876543210"
+                                        href="tel:+919672655586"
                                         className="text-gray-700 hover:text-[#D88F70] cursor-pointer"
                                     >
-                                        +91 9664348046
+                                        +91 96726 55586
                                     </a>
                                 </div>
                             </div>
@@ -446,7 +446,7 @@ const App: React.FC = () => {
                             </div>
                             <h3 className="text-xl font-semibold mb-3">Customer Support</h3>
                             <div className="mb-4">
-                                <p className="text-gray-700 font-medium">Priya Kapoor</p>
+                                <p className="text-gray-700 font-medium">Amrita Sharma</p>
                                 <p className="text-gray-600">Customer Service Manager</p>
                             </div>
                             <div className="space-y-2 mb-4">
@@ -482,31 +482,31 @@ const App: React.FC = () => {
                                 Career Opportunities
                             </h3>
                             <div className="mb-4">
-                                <p className="text-gray-700 font-medium">Aisha Khan</p>
-                                <p className="text-gray-600">HR Director</p>
+                                <p className="text-gray-700 font-medium">Aditya Sharma</p>
+                                <p className="text-gray-600">Operations Manager</p>
                             </div>
                             <div className="space-y-2 mb-4">
                                 <div className="flex items-center">
                                     <i className="fas fa-envelope text-[#6B8E9B] mr-3"></i>
                                     <a
-                                        href="mailto:careers@omcottons.com"
+                                        href="mailto:ops@omcottons.com"
                                         className="text-gray-700 hover:text-[#6B8E9B] cursor-pointer"
                                     >
-                                        careers@omcottons.com
+                                        ops@omcottons.com
                                     </a>
                                 </div>
                                 <div className="flex items-center">
                                     <i className="fas fa-phone-alt text-[#6B8E9B] mr-3"></i>
                                     <a
-                                        href="tel:+919876543212"
+                                        href="tel:+919664348046"
                                         className="text-gray-700 hover:text-[#6B8E9B] cursor-pointer"
                                     >
-                                        +91 98765 43212
+                                        +91 96643 48046
                                     </a>
                                 </div>
                             </div>
                             <p className="text-gray-600 text-sm">
-                                For job opportunities, internships, and career development.
+                                For operations queries, technical support, and career development.
                             </p>
                         </div>
                     </div>
