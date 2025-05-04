@@ -284,43 +284,10 @@ const App: React.FC = () => {
     const categoryInfo = getCategoryInfo();
     return (
         <div className="min-h-screen font-sans bg-[#F8F7F3] text-gray-800">
-            {/* Navigation */}
-            {/* <nav className={`fixed w-full z-50 transition-all duration-400 ${isScrolled ? 'bg-[#F8F7F3] shadow-sm' : 'bg-transparent'}`}>
-                <div className="container mx-auto px-6 py-4">
-                    <div className="flex justify-between items-center">
-                        <div className="text-2xl font-semibold tracking-wider">
-                            <a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799" data-readdy="true" className="cursor-pointer">
-                                <span className="text-[#D88F70]">Om</span> <span className="text-gray-800">Cottons</span>
-                            </a>
-                        </div>
-                        <div className="hidden md:flex items-center space-x-8">
-                            <a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799" data-readdy="true" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer">Home</a>
-                            <a href="#" className="text-[#D88F70] font-medium transition-colors duration-400 tracking-wide cursor-pointer">Products</a>
-                            <a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/3ed2e05a-6169-4d0b-9a19-4fa7cad8b6be" data-readdy="true" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer">Sustainability</a>
-                            <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer">About</a>
-                            <a href="#" className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer">Contact</a>
-                        </div>
-                        <div className="hidden md:flex items-center space-x-4">
-                            <button className="px-5 py-2 bg-[#ADC4A0] text-white rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
-                            <button className="px-5 py-2 border border-[#D88F70] text-[#D88F70] rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400 whitespace-nowrap cursor-pointer">Book a Call</button>
-                        </div>
-                        <div className="md:hidden cursor-pointer">
-                            <i className="fas fa-bars text-xl"></i>
-                        </div>
-                    </div>
-                </div>
-            </nav> */}
             <Navbar />
             {/* Page Header */}
             <div className="pt-24 pb-8 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="flex items-center mb-4">
-                        <a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799" data-readdy="true" className="text-gray-500 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">
-                            <i className="fas fa-home mr-2"></i>Home
-                        </a>
-                        <span className="mx-2 text-gray-400">/</span>
-                        <span className="text-[#D88F70]">Products</span>
-                    </div>
                     <h1 className="text-4xl font-semibold tracking-wide mb-2">Our Products</h1>
                     <p className="text-gray-600 max-w-3xl">
                         Discover our premium cotton garments crafted with quality, sustainability, and attention to detail.

@@ -5,11 +5,20 @@ import { Link } from 'react-router-dom';
 import Banner from './UnderConstructionBanner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import BreadCrumb from './BreadCrumb';
 
 const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const getCrumb = (path: string) => {
+        if (path === '/' || path === '') return 'Home';
+        const seg = path.replace(/^\/+|\/+$/g, '').split('/')[0];
+        return seg.charAt(0).toUpperCase() + seg.slice(1);
+    };
+
+    const crumb = getCrumb(location.pathname);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -68,6 +77,14 @@ const Navbar: React.FC = () => {
                     </div>
                 )}
             </nav>
+            {/* only render a crumb‐header on subpages */}
+            {location.pathname !== '/' && (
+                <div className="pt-24 pb-8 bg-white">
+                    <div className="container mx-auto px-6">
+                        <BreadCrumb crumb={crumb} />
+                    </div>
+                </div>
+            )}
         </>
     );
 };
