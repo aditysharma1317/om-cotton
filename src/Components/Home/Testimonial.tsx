@@ -29,7 +29,7 @@ const Testimonial: React.FC = () => {
         }
     ];
     return (
-        <section className="py-20 bg-[#F8F7F3]">
+        <section className="py-20 bg-[#E7DFD2]">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-semibold tracking-wide">What Our Clients Say</h2>

@@ -5,6 +5,7 @@ import ValueProposition from '../Components/Home/ValueProposition';
 import Testimonial from '../Components/Home/Testimonial';
 import Hero from '../Components/Home/Hero';
 import Cta from '../Components/Home/Cta';
+import FeaturedProducts from '../Components/Home/FeaturedProducts';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <ValueProposition />
+      <FeaturedProducts />
       <Testimonial />
       <Cta />
       <Footer />
