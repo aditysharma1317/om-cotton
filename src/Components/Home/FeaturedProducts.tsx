@@ -100,15 +100,6 @@ const FeaturedProducts: React.FC = () => {
                                 <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
                                 <p className="text-gray-600 mb-4 flex-grow">{product.description}</p>
                             </div>
-
-                            <div className="absolute bottom-2.5 left-6 right-6 flex justify-between items-center">
-                                <span className="text-[#D88F70] font-medium">
-                                    MOQ: {product.moq} {product.unit}
-                                </span>
-                                <button className="px-4 py-2 bg-[#ADC4A0] text-white rounded-button hover:bg-[#9BB58E] transition-colors duration-300 whitespace-nowrap">
-                                    Request Sample
-                                </button>
-                            </div>
                         </div>
                     ))}
                 </div>
