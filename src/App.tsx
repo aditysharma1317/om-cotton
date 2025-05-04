@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/request-samples" element={<RequestSample />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:id" element={<BlogDetail />} />
+        <Route path="/blogs/:slug" element={<BlogDetail />} />
       </Routes>
     </BrowserRouter>
   );

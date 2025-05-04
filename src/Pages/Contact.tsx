@@ -593,7 +593,7 @@ const App: React.FC = () => {
                             </div>
                             <div className="p-6">
                                 <p className="text-gray-700 mb-4">
-                                    Tour our Mumbai showroom to see our full collection and meet
+                                    Tour our Pilani showroom to see our full collection and meet
                                     our team in person.
                                 </p>
                                 <button className="px-5 py-2 bg-[#6B8E9B] text-white !rounded-button hover:bg-[#5A7D8A] transition-colors duration-300 whitespace-nowrap cursor-pointer">
