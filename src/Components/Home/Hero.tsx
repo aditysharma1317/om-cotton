@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
                         Your Trusted Partner in Organic Cotton Sourcing.
                     </h1>
                     <p className="text-xl mb-8 tracking-wide">
-                        Connecting fashion brands with premium organic cotton suppliers, ensuring quality, sustainability, and ethical sourcing.
+                        Connecting fashion brands with premium organic cotton manufacturers. Ensuring quality, sustainability, and ethical practices from farm to fabric.
                     </p>
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <button onClick={() => navigate('/request-samples')} className="px-8 py-3 bg-[#ADC4A0] text-white text-lg rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
