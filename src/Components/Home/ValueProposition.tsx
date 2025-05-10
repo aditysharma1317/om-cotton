@@ -5,7 +5,10 @@ const ValueProposition: React.FC = () => {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-semibold tracking-wide">Why Choose Om Cottons</h2>
+                    <h2 className="text-3xl font-semibold tracking-wide mb-4">Why Choose Om Cottons</h2>
+                    <p className="text-gray-600 max-w-3xl mx-auto">
+                        We help fashion brands scale sustainably by delivering certified cotton products backed by trusted sourcing, strict quality control, and ethical manufacturing.
+                    </p>
                     <div className="w-24 h-1 bg-[#D88F70] mx-auto mt-4"></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -15,7 +18,7 @@ const ValueProposition: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-3 tracking-wide">Verified Quality</h3>
                         <p className="text-gray-600 leading-relaxed">
-                            Rigorous supplier vetting and quality control processes ensure only the finest organic cotton reaches your production line.
+                            Our team follows strict quality checks at every step to ensure that only premium-grade, certified organic cotton is used in your garments, every time.
                         </p>
                     </div>
                     <div className="text-center group">
@@ -24,7 +27,7 @@ const ValueProposition: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-3 tracking-wide">Strategic Partnerships</h3>
                         <p className="text-gray-600 leading-relaxed">
-                            Direct relationships with certified organic cotton suppliers worldwide, offering competitive advantages to our clients.
+                            We work directly with certified cotton farmers and manufacturers worldwide, giving you reliable access, better pricing, and scalable production.
                         </p>
                     </div>
                     <div className="text-center group">
@@ -33,7 +36,7 @@ const ValueProposition: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-3 tracking-wide">Sustainability</h3>
                         <p className="text-gray-600 leading-relaxed">
-                            Ensuring transparent and ethical sourcing practices that align with global organic and sustainability standards.
+                            Our operations are built on transparent, eco-conscious, and socially responsible sourcing methods that align with leading global sustainability goals.
                         </p>
                     </div>
                 </div>

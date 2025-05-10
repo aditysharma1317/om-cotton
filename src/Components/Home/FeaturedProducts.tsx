@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Product {
     id: string;
@@ -14,7 +15,7 @@ const products: Product[] = [
     {
         id: '1',
         title: 'Cotton T-Shirts',
-        description: 'From classic crew necks to V-necks and polos, our cotton t-shirts are crafted using GOTS-certified fabrics. Available in multiple fits and colors, they’re ideal for retail brands, uniforms, and promotions.',
+        description: 'Our organic cotton t-shirts, crewnecks, V-necks, and polos are soft, breathable, and long-lasting. Multiple fits and shades make them ideal for retail, uniforms, and promotions.',
         imageUrl: 'https://readdy.ai/api/search-image?query=premium%20organic%20cotton%20yarn%20spools%20in%20natural%20white%20color%20arranged%20neatly%20on%20wooden%20surface%2C%20professional%20product%20photography%20with%20soft%20natural%20lighting%20and%20clean%20background&width=600&height=800&seq=14&orientation=portrait',
         badge: 'GOTS Certified',
         moq: 500,
@@ -23,7 +24,7 @@ const products: Product[] = [
     {
         id: '2',
         title: 'Cotton Pants & Trousers',
-        description: 'Our collection of cotton trousers includes casual pants, formal trousers, and everyday wear bottoms. Made with breathable cotton, they’re stitched for lasting comfort and style.',
+        description: 'Choose from smart formal trousers to everyday cotton bottoms, all made with breathable organic cotton and tailored for comfort, style, and durability.',
         imageUrl: 'https://readdy.ai/api/search-image?query=organic%20cotton%20fabric%20rolls%20in%20various%20natural%20shades%20displayed%20professionally%20in%20a%20modern%20warehouse%20setting%2C%20clean%20industrial%20photography%20with%20directional%20lighting&width=600&height=800&seq=15&orientation=portrait',
         badge: 'OCS Certified',
         moq: 1000,
@@ -32,7 +33,7 @@ const products: Product[] = [
     {
         id: '3',
         title: 'Cotton bedcovers',
-        description: 'We offer finely tailored cotton suits for both ethnic and formal wear collections. Designed with precision and using premium cotton, our suits balance tradition with modern tailoring.',
+        description: 'Our premium cotton bedcovers combine traditional stitching with modern aesthetics. Perfect for upscale bedding collections and ethically sourced product lines.',
         imageUrl: 'https://readdy.ai/api/search-image?query=premium%20organic%20cotton%20knitted%20textile%20close%20up%20showing%20intricate%20patterns%20and%20weave%20details%2C%20luxury%20fabric%20photography%20with%20professional%20lighting%20and%20neutral%20background&width=600&height=800&seq=16&orientation=portrait',
         badge: 'Fair Trade',
         moq: 800,
@@ -41,7 +42,7 @@ const products: Product[] = [
     {
         id: '4',
         title: 'Cotton Blankets',
-        description: 'Celebrate Indian tradition with our beautifully woven pure cotton sarees. Available in elegant patterns and color palettes, our sarees are perfect for both everyday and festive collections.',
+        description: "Woven with care, our cotton blankets reflect India's textile heritage. Lightweight yet warm, they’re ideal for conscious consumers seeking natural comfort.",
         imageUrl: 'https://readdy.ai/api/search-image?query=premium%20organic%20cotton%20knitted%20textile%20close%20up%20showing%20intricate%20patterns%20and%20weave%20details%2C%20luxury%20fabric%20photography%20with%20professional%20lighting%20and%20neutral%20background&width=600&height=800&seq=16&orientation=portrait',
         badge: 'Fair Trade',
         moq: 800,
@@ -50,7 +51,7 @@ const products: Product[] = [
     {
         id: '5',
         title: 'Cotton Track Pants',
-        description: 'Comfort meets flexibility in our cotton track pants, ideal for sportswear and casual wear brands. Available in various fits, these are tailored to support movement and durability.',
+        description: 'Engineered for comfort and motion, our cotton track pants are built for performance and style, perfect for sportswear, leisurewear, or active lifestyle brands.',
         imageUrl: 'https://readdy.ai/api/search-image?query=premium%20organic%20cotton%20knitted%20textile%20close%20up%20showing%20intricate%20patterns%20and%20weave%20details%2C%20luxury%20fabric%20photography%20with%20professional%20lighting%20and%20neutral%20background&width=600&height=800&seq=16&orientation=portrait',
         badge: 'Fair Trade',
         moq: 800,
@@ -59,7 +60,7 @@ const products: Product[] = [
     {
         id: '6',
         title: 'Cotton Handkerchiefs',
-        description: 'We provide soft, absorbent cotton handkerchiefs in a variety of sizes and prints. Our handkerchiefs are perfect for bulk orders and can be customized for private labels.',
+        description: 'Absorbent, durable, and customizable for private labels—crafted for everyday use with sustainable flair.',
         imageUrl: 'https://readdy.ai/api/search-image?query=premium%20organic%20cotton%20knitted%20textile%20close%20up%20showing%20intricate%20patterns%20and%20weave%20details%2C%20luxury%20fabric%20photography%20with%20professional%20lighting%20and%20neutral%20background&width=600&height=800&seq=16&orientation=portrait',
         badge: 'Fair Trade',
         moq: 800,
@@ -75,7 +76,7 @@ const FeaturedProducts: React.FC = () => {
                     <h2 className="text-3xl font-semibold tracking-wide">Featured Products</h2>
                     <div className="w-24 h-1 bg-[#D88F70] mx-auto mt-4" />
                     <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-                        Discover our curated selection of premium organic cotton products from verified suppliers worldwide.
+                        Explore our handpicked range of sustainable cotton garments, crafted with certified fabrics and trusted by fashion brands across the globe.
                     </p>
                 </div>
 
@@ -104,10 +105,13 @@ const FeaturedProducts: React.FC = () => {
                     ))}
                 </div>
 
+
                 <div className="text-center mt-12">
-                    <button className="px-8 py-3 bg-[#D88F70] text-white rounded-button hover:bg-[#c27a5d] transition-colors duration-300 whitespace-nowrap">
-                        View All Products
-                    </button>
+                    <Link to="/products">
+                        <button className="px-8 py-3 bg-[#D88F70] text-white rounded-button hover:bg-[#c27a5d] transition-colors duration-300 whitespace-nowrap">
+                            View All Products
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

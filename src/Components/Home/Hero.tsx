@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section className="relative h-screen flex items-center">
             <div className="absolute inset-0 z-0">
@@ -20,7 +22,7 @@ const Hero: React.FC = () => {
                         Connecting fashion brands with premium organic cotton suppliers, ensuring quality, sustainability, and ethical sourcing.
                     </p>
                     <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button className="px-8 py-3 bg-[#ADC4A0] text-white text-lg rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
+                        <button onClick={() => navigate('/request-samples')} className="px-8 py-3 bg-[#ADC4A0] text-white text-lg rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer">Request Samples</button>
                         <button className="px-8 py-3 border border-[#D88F70] text-[#D88F70] text-lg rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400 whitespace-nowrap cursor-pointer">Book a Call</button>
                     </div>
                 </div>

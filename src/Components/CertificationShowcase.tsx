@@ -7,8 +7,9 @@ const Showcase: React.FC = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-semibold tracking-wide mb-4">Our Certifications</h2>
                     <p className="text-gray-600 max-w-3xl mx-auto">
-                        We hold ourselves to the highest standards through internationally recognized certifications that verify our commitment to sustainability and ethical practices.
+                        We back our sustainability promises with globally respected certifications. Each one reflects our commitment to ethical sourcing, safe labor, and eco-friendly manufacturing.
                     </p>
+                    <div className="w-24 h-1 bg-[#D88F70] mx-auto mt-4"></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="bg-white rounded-lg p-8 text-center shadow-sm">
@@ -17,7 +18,7 @@ const Showcase: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">GOTS Certified</h3>
                         <p className="text-gray-600">
-                            The Global Organic Textile Standard ensures organic status of textiles from harvesting of the raw materials through environmentally and socially responsible manufacturing.
+                            GOTS ensures our cotton is grown organically and processed without harmful chemicals. It also confirms that every stage from harvesting to packaging, meets strict social and environmental standards.
                         </p>
                     </div>
                     <div className="bg-white rounded-lg p-8 text-center shadow-sm">
@@ -26,7 +27,7 @@ const Showcase: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">Fair Trade Certified</h3>
                         <p className="text-gray-600">
-                            Fair Trade certification ensures that farmers and workers behind our products receive fair compensation and work in safe conditions with respect for their rights and dignity.
+                            Our Fair Trade certification means every worker in our supply chain is treated with dignity, paid fairly, and works in safe conditions. It reflects our focus on equity, respect, and long-term impact.
                         </p>
                     </div>
                     <div className="bg-white rounded-lg p-8 text-center shadow-sm">
@@ -35,7 +36,7 @@ const Showcase: React.FC = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">Recycled Materials</h3>
                         <p className="text-gray-600">
-                            This certification verifies that our recycled materials meet quality standards and truly come from post-consumer or post-industrial waste, reducing environmental impact.
+                            This certification confirms that the recycled fibers we use are sourced from verified post-consumer or industrial waste, helping reduce landfill pressure and conserve valuable raw resources.
                         </p>
                     </div>
                 </div>
