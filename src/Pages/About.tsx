@@ -163,13 +163,17 @@ const App: React.FC = () => {
                             <div>
                                 <h2 className="text-3xl font-semibold mb-6">The Om Cottons Journey</h2>
                                 <p className="text-gray-700 mb-4 leading-relaxed">
-                                    Om Cottons was born from founder Priya Sharma's vision to transform the textile industry. After witnessing the environmental and social impact of conventional cotton production during her years working in the fashion industry, Priya decided to create a company that would do things differently.
+                                    The vision for Om Cottons was shaped by the personal and professional journey of our founder, Vinod Kumar Sharma, a pioneer in the Indian textile industry. Witnessing the environmental and social costs of fast fashion, he was driven to create a company that would challenge conventional norms and place sustainability at the center of its mission.
                                 </p>
                                 <p className="text-gray-700 mb-4 leading-relaxed">
-                                    Starting with a small workshop in Mumbai in 2010, we began producing limited quantities of organic cotton t-shirts. Our commitment to quality and sustainability quickly earned us a loyal customer base, allowing us to expand our product lines and reach.
+                                    Om Cottons began with a small line of organic cotton garments, crafted with care and purpose. Over the years, our partnerships have expanded to include 500+ organic cotton farmers, and our apparel is now worn in over 30 countries by consumers who value transparency, ethical sourcing, and timeless design.
                                 </p>
+                                <h4 className="text-3xl font-semibold mb-6">Our Mission</h4>
                                 <p className="text-gray-700 mb-6 leading-relaxed">
-                                    Today, Om Cottons works with over 500 organic cotton farmers across India, supporting their transition to sustainable farming practices. Our products are sold in 30 countries, proving that ethical business can thrive on a global scale.
+                                    To craft exceptional cotton clothing that respects both people and the planet—proving that sustainable fashion and commercial success can thrive side by side.
+                                    We are committed to reshaping the textile industry by promoting responsible practices that support ecosystems, uplift communities, and create garments with lasting value. </p>
+                                <h4 className="text-3xl font-semibold mb-6">Our Vision</h4>
+                                <p className="text-gray-700 mb-6 leading-relaxed"> A world where sustainable fashion is no longer the alternative, but the industry standard. Every garment should be created with care—for the Earth, for the artisans, and for future generations.
                                 </p>
                                 <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
                                     <h3 className="text-xl font-semibold mb-3 text-[#D88F70]">Our Name</h3>

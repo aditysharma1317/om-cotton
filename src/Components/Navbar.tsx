@@ -35,7 +35,6 @@ const Navbar: React.FC = () => {
     return (
         <>
             <nav className={`fixed w-full z-50 transition-all duration-400 ${isScrolled ? 'bg-[#F8F7F3] shadow-sm' : 'bg-transparent'}`}>
-                <Banner />
                 <div className="container mx-auto px-6 py-4">
                     <div className="flex justify-between items-center">
                         <div className="text-2xl font-semibold tracking-wider">
