@@ -79,76 +79,6 @@ const App: React.FC = () => {
     };
     return (
         <div className="min-h-screen font-sans bg-[#F8F7F3] text-gray-800">
-            {/* Navigation */}
-            {/* <nav
-        className={`fixed w-full z-50 transition-all duration-400 ${isScrolled ? "bg-[#F8F7F3] shadow-sm" : "bg-transparent"}`}
-      >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-semibold tracking-wider">
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799"
-                data-readdy="true"
-                className="cursor-pointer"
-              >
-                <span className="text-[#D88F70]">Om</span>{" "}
-                <span className="text-gray-800">Cottons</span>
-              </a>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799"
-                data-readdy="true"
-                className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer"
-              >
-                Home
-              </a>
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/e5769924-a09c-4c36-a569-e98d273656bc"
-                data-readdy="true"
-                className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer"
-              >
-                Products
-              </a>
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/3ed2e05a-6169-4d0b-9a19-4fa7cad8b6be"
-                data-readdy="true"
-                className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer"
-              >
-                Sustainability
-              </a>
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/ae45447f-9172-433e-b03a-ff4e7f415fae"
-                data-readdy="true"
-                className="hover:text-[#D88F70] transition-colors duration-400 tracking-wide cursor-pointer"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="text-[#D88F70] font-medium transition-colors duration-400 tracking-wide cursor-pointer"
-              >
-                Contact
-              </a>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <a
-                href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/a707126a-d554-42d4-b331-e722745adfbb"
-                data-readdy="true"
-                className="px-5 py-2 bg-[#ADC4A0] text-white !rounded-button hover:bg-[#9BB58E] transition-colors duration-400 whitespace-nowrap cursor-pointer inline-block"
-              >
-                Request Samples
-              </a>
-              <button className="px-5 py-2 border border-[#D88F70] text-[#D88F70] !rounded-button hover:bg-[#D88F70] hover:text-white transition-colors duration-400 whitespace-nowrap cursor-pointer">
-                Book a Call
-              </button>
-            </div>
-            <div className="md:hidden cursor-pointer">
-              <i className="fas fa-bars text-xl"></i>
-            </div>
-          </div>
-        </div>
-      </nav> */}
             <Navbar />
             {/* Hero Section */}
             <section className="relative pt-24 overflow-hidden">
@@ -567,7 +497,7 @@ const App: React.FC = () => {
                                     firsthand with our sample service.
                                 </p>
                                 <a
-                                    href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/a707126a-d554-42d4-b331-e722745adfbb"
+                                    href="#"
                                     data-readdy="true"
                                     className="px-5 py-2 bg-[#ADC4A0] text-white !rounded-button hover:bg-[#9BB58E] transition-colors duration-300 whitespace-nowrap cursor-pointer inline-block"
                                 >
@@ -679,7 +609,7 @@ const App: React.FC = () => {
                             <ul className="space-y-3">
                                 <li>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/fca624f7-a846-4363-83f3-888cf01bb799"
+                                        href="#"
                                         data-readdy="true"
                                         className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
                                     >
@@ -688,7 +618,7 @@ const App: React.FC = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/e5769924-a09c-4c36-a569-e98d273656bc"
+                                        href="#"
                                         data-readdy="true"
                                         className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
                                     >
@@ -697,7 +627,7 @@ const App: React.FC = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/3ed2e05a-6169-4d0b-9a19-4fa7cad8b6be"
+                                        href="#"
                                         data-readdy="true"
                                         className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
                                     >
@@ -706,7 +636,7 @@ const App: React.FC = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/ae45447f-9172-433e-b03a-ff4e7f415fae"
+                                        href="#"
                                         data-readdy="true"
                                         className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
                                     >
@@ -730,7 +660,7 @@ const App: React.FC = () => {
                             <ul className="space-y-3">
                                 <li>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/ae45447f-9172-433e-b03a-ff4e7f415fae"
+                                        href="#"
                                         data-readdy="true"
                                         className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer"
                                     >

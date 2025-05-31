@@ -39,9 +39,9 @@ const App: React.FC = () => {
                 </div>
                 <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
                     <div className="max-w-2xl">
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-gray-800">Our Commitment to Sustainability</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-gray-800">Sustainable Fabrics of the Future</h1>
                         <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                            At Om Cottons, we believe in creating garments that not only look and feel good, but also do good for our planet and its people. Our sustainable practices span every aspect of our business.
+                            At Om Cottons, sustainability is woven into everything we do. We source and deliver eco-conscious textiles from across India, partnering only with certified manufacturers who follow the highest environmental and ethical standards.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <div className="bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-sm border border-gray-100">

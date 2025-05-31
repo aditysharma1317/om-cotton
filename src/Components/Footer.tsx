@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                         <h3 className="text-lg font-semibold mb-6 tracking-wide">Quick Links</h3>
                         <ul className="space-y-3">
                             <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Home</a></li>
-                            <li><a href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/e5769924-a09c-4c36-a569-e98d273656bc" data-readdy="true" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Products</a></li>
+                            <li><a href="#" data-readdy="true" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Products</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Sustainability</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">About Us</a></li>
                             <li><a href="#" className="text-gray-600 hover:text-[#D88F70] transition-colors duration-400 cursor-pointer">Contact</a></li>

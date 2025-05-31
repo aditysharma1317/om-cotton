@@ -254,7 +254,7 @@ const App: React.FC = () => {
                             decisions for your next project.
                         </p>
                         <a
-                            href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/7a561bbd-6b25-4cfc-9942-9c0ac617001c"
+                            href="#"
                             data-readdy="true"
                             className="inline-flex items-center text-[#D88F70] hover:text-[#C67E60] transition-colors duration-300 cursor-pointer"
                         >
@@ -618,7 +618,7 @@ const App: React.FC = () => {
                                 </p>
                                 <div className="flex flex-wrap gap-4">
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/7a561bbd-6b25-4cfc-9942-9c0ac617001c"
+                                        href="#"
                                         data-readdy="true"
                                         className="px-5 py-2 bg-[#D88F70] text-white !rounded-button hover:bg-[#C67E60] transition-colors duration-300 whitespace-nowrap cursor-pointer"
                                     >
@@ -1015,7 +1015,7 @@ const App: React.FC = () => {
                                         Request
                                     </button>
                                     <a
-                                        href="https://readdy.ai/home/f9f42b02-5c36-49ef-ac63-f199f73582d2/7a561bbd-6b25-4cfc-9942-9c0ac617001c"
+                                        href="#"
                                         data-readdy="true"
                                         className="px-6 py-3 border border-gray-300 text-gray-700 !rounded-button hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap cursor-pointer"
                                     >
