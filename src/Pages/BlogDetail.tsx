@@ -23,12 +23,25 @@ const BlogDetail: React.FC = () => {
 
   useEffect(() => {
     if (!slug) return;
-    client
-      .request<{ publication: { post: PostDetail } }>(GET_POST_BY_SLUG, { slug })
-      .then(res => setPost(res.publication.post))
+    setLoading(true);
+    fetch(`https://gql.hashnode.com/?_=${Date.now()}`, {
+      method: 'POST',
+      cache: 'no-store',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: GET_POST_BY_SLUG,
+        variables: { slug },
+      }),
+    })
+      .then(res => res.json())
+      .then(json => {
+        console.log('🔄 post detail response:', json);
+        setPost(json.data.publication.post);
+      })
       .catch(err => console.error('Hashnode fetch error:', err))
       .finally(() => setLoading(false));
-  }, [slug]);
+  }, [slug]);  // runs on mount and any slug change (i.e. on refresh of detail page)
+
 
   useEffect(() => {
     if (post) {
@@ -60,7 +73,19 @@ const BlogDetail: React.FC = () => {
         {/* Hero */}
         <div className="mb-12">
           <div className="rounded-xl overflow-hidden shadow-lg">
-            <img src={post.coverImage.url} alt={post.title} className="w-full h-[500px] object-cover object-top" />
+            {post.coverImage?.url
+              ? (
+                <img
+                  src={post.coverImage.url}
+                  alt={post.title}
+                  className="w-full h-[500px] object-cover object-top"
+                />
+              ) : (
+                <div className="w-full h-[500px] bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-500">No Cover Image</span>
+                </div>
+              )
+            }
           </div>
           <div className="max-w-4xl mx-auto mt-8">
             <div className="flex items-center mb-4">

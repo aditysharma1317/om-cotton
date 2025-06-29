@@ -1,15 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a0b5e14.css",
-    "main.js": "/static/js/main.d6ea2d97.js",
+    "main.css": "/static/css/main.981a9960.css",
+    "main.js": "/static/js/main.653ba779.js",
     "static/js/453.c11de16b.chunk.js": "/static/js/453.c11de16b.chunk.js",
+    "static/media/cotton-fields.webp": "/static/media/cotton-fields.c9ac8d57b3a4c507030d.webp",
+    "static/media/featured-product-trackpants.webp": "/static/media/featured-product-trackpants.0d081fa054fc1abc639c.webp",
+    "static/media/featured-product-handkerchiefs.webp": "/static/media/featured-product-handkerchiefs.640e6eced2e0673844ff.webp",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/featured-product-blanket.webp": "/static/media/featured-product-blanket.68b70caea6db99e49221.webp",
+    "static/media/featured-product-pants.webp": "/static/media/featured-product-pants.75b2ec985f9ce65aade4.webp",
+    "static/media/featured-product-bedsheet.webp": "/static/media/featured-product-bedsheet.348cec0ca3fcc5c334d1.webp",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/featured-product-tshirt.webp": "/static/media/featured-product-tshirt.f1a3b24fcb9b3d7514c3.webp",
+    "static/media/vinod-sharma.webp": "/static/media/vinod-sharma.e92fb7420d0dd8a85d7c.webp",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/index.html",
-    "main.6a0b5e14.css.map": "/static/css/main.6a0b5e14.css.map",
-    "main.d6ea2d97.js.map": "/static/js/main.d6ea2d97.js.map",
+    "main.981a9960.css.map": "/static/css/main.981a9960.css.map",
+    "main.653ba779.js.map": "/static/js/main.653ba779.js.map",
     "453.c11de16b.chunk.js.map": "/static/js/453.c11de16b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a0b5e14.css",
-    "static/js/main.d6ea2d97.js"
+    "static/css/main.981a9960.css",
+    "static/js/main.653ba779.js"
   ]
 }
